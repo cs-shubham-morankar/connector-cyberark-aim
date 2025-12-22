@@ -51,7 +51,7 @@
                     "FailRequest OnPassword Change": ""
                   }
                 },
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "connector": "cyberark-aim",
                 "operation": "get_password",
                 "operationTitle": "Get Password"
@@ -88,7 +88,7 @@
           ]
         }
       ],
-      "name": "Sample - CyberArk AIM - 1.0.0",
+      "name": "Sample - CyberArk AIM - 1.1.0",
       "description": "CyberArk Application Identity Manager (AIM) is a key component in CyberArk's Privileged Access Security suite. It helps manage and secure credentials used by applications and services by providing secure retrieval of passwords and other sensitive data.",
       "visible": true,
       "recordTags": [

@@ -1,6 +1,6 @@
 {
   "name": "cyberark-aim",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "label": "CyberArk AIM",
   "description": "CyberArk Application Identity Manager (AIM) is a key component in CyberArk's Privileged Access Security suite. It helps manage and secure credentials used by applications and services by providing secure retrieval of passwords and other sensitive data.",
   "publisher": "Fortinet",
@@ -11,7 +11,7 @@
     "vault"
   ],
   "category": "Vault",
-  "help_online": "https://github.com/fortinet-fortisoar/connector-cyberark-aim/blob/release/1.0.0/docs/readme.md",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-cyberark-aim/blob/release/1.1.0/docs/readme.md",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
   "ingestion_supported": false,
@@ -46,6 +46,38 @@
         "editable": true,
         "required": true,
         "tooltip": "Name of the Safe that stores the credentials, including passwords."
+      },
+      {
+        "title": "Objects",
+        "name": "Object",
+        "description": "Specify the comma-separated object names of the Safe that stores the credentials, including passwords.",
+        "type": "text",
+        "visible": true,
+        "editable": true,
+        "required": true,
+        "tooltip": "Specify the comma-separated object names of the Safe that stores the credentials, including passwords."
+      },
+      {
+        "title": "Folder",
+        "name": "Folder",
+        "description": "Specify the name of the Folder that stores the credentials, including passwords.",
+        "type": "text",
+        "visible": true,
+        "editable": true,
+        "required": false,
+        "value": "root",
+        "tooltip": "Specify the name of the Folder that stores the credentials, including passwords."
+      },
+      {
+        "title": "Security Level",
+        "name": "security_level",
+        "description": "Specify the security level of the CyberArk.",
+        "type": "text",
+        "visible": true,
+        "editable": true,
+        "required": false,
+        "tooltip": "Specify the security level of the CyberArk. Note: If you are using old version CyberArk AIM then you can pass \"DEFAULT:@SECLEVEL=1\".",
+        "placeholder": "For e.g DEFAULT:@SECLEVEL=1"
       },
       {
         "title": "Authentication Type",
