@@ -97,8 +97,13 @@ def get_password(config, params):
     try:
         cyber_ark = CyberARK(config)
         formatted_output = []
-        object_list = config.get('Object') if config.get('Object') else params.get('Object')
-        folder = config.get('Folder') if config.get('Folder') else params.get('Folder')
+        object_list = config.get('Object')
+        if config.get('Folder'):
+            folder = config.get('Folder')
+        elif params.get('Folder'):
+            folder = params.get('Folder')
+        else:
+            folder = ""
         if isinstance(object_list, str):
             object_list = [obj.strip() for obj in object_list.split(",") if obj.strip()]
         for obj in object_list:
@@ -110,8 +115,8 @@ def get_password(config, params):
             endpoint = operations['get_credentials'][1].format(config.get('AppID'), config.get('Safe'))
             additional_attributes = params.get('additional_attributes')
             if additional_attributes:
-                params.update(params.pop('additional_attributes'))
-            params = {k: v for k, v in params.items() if v is not None and v != ''}
+                query_parameters.update(params.pop('additional_attributes'))
+            query_parameters = {k: v for k, v in query_parameters.items() if v is not None and v != ''}
             retrieve_creds = cyber_ark.make_request_call(endpoint, method='GET', query_params=query_parameters)
             formatted_output.append(retrieve_creds)
         return formatted_output

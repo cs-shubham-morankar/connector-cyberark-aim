@@ -152,16 +152,6 @@
           "tooltip": "Specifies the name of the folder where the password is stored. Default, it set as \"Root\"."
         },
         {
-          "title": "Object",
-          "description": "Specifies the name of the password object to retrieve.",
-          "name": "Object",
-          "type": "text",
-          "visible": true,
-          "editable": true,
-          "required": false,
-          "tooltip": "Specifies the name of the password object to retrieve."
-        },
-        {
           "title": "Username",
           "description": "Defines search criteria according to the Username account property.",
           "name": "UserName",
