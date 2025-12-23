@@ -98,10 +98,10 @@ def get_password(config, params):
         cyber_ark = CyberARK(config)
         formatted_output = []
         object_list = config.get('Object')
-        if config.get('Folder'):
-            folder = config.get('Folder')
-        elif params.get('Folder'):
+        if params.get('Folder'):
             folder = params.get('Folder')
+        elif config.get('Folder'):
+            folder = config.get('Folder')
         else:
             folder = ""
         if isinstance(object_list, str):
