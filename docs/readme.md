@@ -1,5 +1,8 @@
 ## About the connector
-CyberArk Application Identity Manager (AIM) is a key component in CyberArk's Privileged Access Security suite. It helps manage and secure credentials used by applications and services by providing secure retrieval of passwords and other sensitive data.
+
+CyberArk Application Identity Manager (AIM) is a key component in CyberArk's Privileged Access Security suite. It helps
+manage and secure credentials used by applications and services by providing secure retrieval of passwords and other
+sensitive data.
 <p>This document provides information about the CyberArk AIM Connector, which facilitates automated interactions, with a CyberArk AIM server using FortiSOAR&trade; playbooks. Add the CyberArk AIM Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with CyberArk AIM.</p>
 
 ### Version information
@@ -10,7 +13,23 @@ Authored By: Fortinet
 
 Certified: No
 
+## Release Notes for version 1.1.0
+
+Following enhancements have been made to the CyberArk AIM Connector in version 1.1.0:
+<ul>
+<li><p>The following new parameters have been added to the connector configuration:</p>
+
+<ul>
+<li><p>Objects</p></li>
+<li><p>Folder</p></li>
+<li><p>Security Level</p></li>
+</ul></li>
+<li><p>Removed the <code>Objects</code> parameter from the <code>Get Password</code> operation.</p>
+
+</ul>
+
 ## Installing the connector
+
 <p>Use the <strong>Content Hub</strong> to install the connector. For the detailed procedure to install a connector, click <a href="https://docs.fortinet.com/document/fortisoar/0.0.0/installing-a-connector/1/installing-a-connector" target="_top">here</a>.</p><p>You can also use the <code>yum</code> command user to install the connector:</p>
 
 ```
@@ -28,7 +47,8 @@ sudo yum install cyops-connector-cyberark-aim
 
 ## Configuring the connector
 
-For the procedure to configure a connector, click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
+For the procedure to configure a connector,
+click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
 
 ### Configuration parameters
 
@@ -49,14 +69,16 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 
 ## Actions supported by the connector
 
-The following automated operations can be included in playbooks and you can also use the annotations to access operations:
+The following automated operations can be included in playbooks and you can also use the annotations to access
+operations:
 <table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Password</td><td>Enables applications to retrieve passwords from the Central Credential Provider.</td><td>get_password <br/>Investigation</td></tr>
 </tbody></table>
 
 ### operation: Get Password
+
 #### Input parameters
+
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Folder</td><td>Specifies the name of the folder where the password is stored. Default, it set as "Root".
-</td></tr><tr><td>Object</td><td>Specifies the name of the password object to retrieve.
 </td></tr><tr><td>Username</td><td>Defines search criteria according to the Username account property.
 </td></tr><tr><td>Address</td><td>Defines search criteria according to the Address account property.
 </td></tr><tr><td>Policy ID</td><td>Defines the format that will be used in the Set Policy ID method.
@@ -76,13 +98,18 @@ The output contains the following populated JSON schema:
 }</pre>
 
 ## Included playbooks
-The `Sample - CyberArk AIM - 1.1.0` playbook collection comes bundled with the CyberArk AIM connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the CyberArk AIM connector.
+
+The `Sample - CyberArk AIM - 1.1.0` playbook collection comes bundled with the CyberArk AIM connector. These playbooks
+contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > *
+*Playbooks** section in FortiSOAR&trade; after importing the CyberArk AIM connector.
 
 - Get Password
 
 ----
 **Note**:
 
-If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection since the sample playbook collection gets deleted during connector upgrade and delete.
+If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and
+move them to a different collection since the sample playbook collection gets deleted during connector upgrade and
+delete.
 
 ----
