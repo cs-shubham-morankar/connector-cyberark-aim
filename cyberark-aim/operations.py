@@ -200,5 +200,6 @@ def _check_health(config):
 operations = {
     'get_credentials': [get_credentials, '/AIMWebService/api/Accounts?AppID={0}&Safe={1}'],
     'get_credentials_details': [get_credentials_details, '/AIMWebService/api/Accounts?AppID={0}&Safe={1}&Object={2}'],
-    'get_credential': [get_credential, '/AIMWebService/api/Accounts?AppID={0}&Safe={1}&Object={2}']
+    'get_credential': [get_credential, '/AIMWebService/api/Accounts?AppID={0}&Safe={1}&Object={2}'],
+    'get_password': get_password
 }

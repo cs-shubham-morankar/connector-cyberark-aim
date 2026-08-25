@@ -7,25 +7,17 @@ sensitive data.
 
 ### Version information
 
-Connector Version: 1.1.0
+Connector Version: 1.1.1
 
 Authored By: Fortinet
 
 Certified: No
 
-## Release Notes for version 1.1.0
+## Release Notes for version 1.1.1
 
-Following enhancements have been made to the CyberArk AIM Connector in version 1.1.0:
+Following enhancements have been made to the CyberArk AIM Connector in version 1.1.1:
 <ul>
-<li><p>The following new parameters have been added to the connector configuration:</p>
-
-<ul>
-<li><p>Objects</p></li>
-<li><p>Folder</p></li>
-<li><p>Security Level</p></li>
-</ul></li>
-<li><p>Removed the <code>Objects</code> parameter from the <code>Get Password</code> operation.</p>
-
+  <li><p>Resolved the issue with the Get Password action.</p></li>
 </ul>
 
 ## Installing the connector
@@ -99,7 +91,7 @@ The output contains the following populated JSON schema:
 
 ## Included playbooks
 
-The `Sample - CyberArk AIM - 1.1.0` playbook collection comes bundled with the CyberArk AIM connector. These playbooks
+The `Sample - CyberArk AIM - 1.1.1` playbook collection comes bundled with the CyberArk AIM connector. These playbooks
 contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > *
 *Playbooks** section in FortiSOAR&trade; after importing the CyberArk AIM connector.
 

@@ -1,6 +1,6 @@
 {
   "name": "cyberark-aim",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "label": "CyberArk AIM",
   "description": "CyberArk Application Identity Manager (AIM) is a key component in CyberArk's Privileged Access Security suite. It helps manage and secure credentials used by applications and services by providing secure retrieval of passwords and other sensitive data.",
   "publisher": "Fortinet",
@@ -11,7 +11,7 @@
     "vault"
   ],
   "category": "Vault",
-  "help_online": "https://github.com/fortinet-fortisoar/connector-cyberark-aim/blob/release/1.1.0/docs/readme.md",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-cyberark-aim/blob/release/1.1.1/docs/readme.md",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
   "ingestion_supported": false,

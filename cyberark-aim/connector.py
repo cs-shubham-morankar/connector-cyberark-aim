@@ -14,7 +14,9 @@ logger = get_logger('cyberark-aim')
 class CyberArkAIM(Connector):
     def execute(self, config, operation, operation_params, **kwargs):
         try:
-            operation = operations.get(operation)[0]
+            operation = operations.get(operation)
+            if isinstance(operation, (list, tuple)):
+                operation = operation[0]
             return operation(config, operation_params)
         except Exception as err:
             logger.exception("An exception occurred [{}]".format(err))

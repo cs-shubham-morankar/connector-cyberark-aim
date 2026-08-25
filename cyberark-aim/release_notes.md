@@ -1,7 +1,3 @@
-#### Following enhancements have been made to the `CyberArk AIM` Connector in version 1.1.0:
+#### Following enhancements have been made to the `CyberArk AIM` Connector in version 1.1.1:
 
-- The following new parameters have been added to the connector configuration:
-    - Objects
-    - Folder
-    - Security Level
-- Removed the `Objects` parameter from the `Get Password` operation.
+- Resolved the issue with the `Get Password` action.
